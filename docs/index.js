@@ -2,6 +2,8 @@ function getURLParameter(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 }
 
-if (getURLParameter("updateCheck")) {
-  document.getElementById("body").innerHTML+="<h1>UPDATECHECK</h1>";
-}
+(function() {
+  if (getURLParameter("updateCheck")) {
+    document.getElementById("body").innerHTML+="<h1>UPDATECHECK</h1>";
+  }
+})();
