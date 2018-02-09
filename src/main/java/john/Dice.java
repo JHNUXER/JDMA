@@ -1,6 +1,6 @@
 package john;
 
-public class Die {
+public class Dice {
   public ArrayList<Integer> integers = new ArrayList<Integer>();
   private int sides;
   private int index = 0;
@@ -18,7 +18,7 @@ public class Die {
     index = 0;
   }
   
-  public Die(int n) {
+  public Dice(int n) {
     this.sides = n;
     fShuffle();
   }
